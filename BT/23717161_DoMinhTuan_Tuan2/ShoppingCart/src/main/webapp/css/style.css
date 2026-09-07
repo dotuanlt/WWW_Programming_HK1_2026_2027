@@ -1,0 +1,219 @@
+
+:root {
+    --primary-color: #4361ee;
+    --primary-hover: #3a56d4;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+    --error-color: #e63946;
+    --border-radius: 10px;
+    --shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/*Các thành phần dùng chung (Card, Form, Button)*/
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.95em;
+    margin-bottom: -5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button.secondary {
+    background-color: var(--text-muted);
+}
+
+button.secondary:hover {
+    background-color: #5a6268;
+}
+
+/*Trang Đăng nhập*/
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+}
+
+.login-card h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hint {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    text-align: center;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: var(--error-color);
+    font-weight: bold;
+    text-align: center;
+    min-height: 24px;
+    margin: 0;
+}
+
+/* =========================================
+   Trang Sản phẩm (products.jsp)
+   ========================================= */
+.page {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 20px 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+}
+
+header p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+header form {
+    margin: 0;
+}
+
+/* Bảng Sản phẩm */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+td form {
+    margin: 0;
+}
+
+td button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+/* Giỏ hàng */
+.card h2 {
+    margin-top: 0;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.technical {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 20px;
+    word-break: break-all;
+}
